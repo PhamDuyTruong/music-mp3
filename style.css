@@ -1,0 +1,215 @@
+:root{
+    --color-primary-light:#4D378D;
+    --color-primary-dark:#281434;
+    --color-primary-very-dark:#1C0F24;
+    --color-secondary:#FFAB37;
+    --color-tertiary:#FF6089;
+    --color-white-pink:#EFE1E5;
+    --color-song-singer:#E6CBD1;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.6;
+    background-color: var(--color-white-pink);
+    display:flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    border:none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.player{
+    width: 500px;
+    position: relative;
+}
+
+.player .icon-pause{
+    display:none;
+}
+
+.player.playing .icon-play{
+    display: none;
+}
+
+.player.playing .icon-pause{
+    display: inline-block;
+}
+
+.dashboard{
+    background-color: var(--color-primary-light);
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width:500px;
+    z-index: 9999;
+}
+
+.subtitle{
+    color: var(--color-tertiary);
+}
+
+.title{
+    font-family: 'Fugaz One', cursive;
+    color: var(--color-white-pink);
+    font-size: 4rem;
+}
+
+.img-container{
+    margin:.5em auto;
+    width: 200px;
+    height:auto;
+    transition: all linear .08s;
+}
+
+.imgs{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 1px rgba(249, 133, 255,.5);
+}
+
+.btns-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:4em;
+}
+
+.control-btn{
+    background-color: transparent;
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    display:block;
+}
+
+
+.toggle-play-pause{
+    font-size: 6rem;
+    color: var(--color-tertiary);
+    cursor: pointer;
+}
+
+
+.replay-btn.active,.shuffle-btn.active{
+    color:var(--color-tertiary);
+}
+
+
+.dashboard__slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: var(--color-tertiary);
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+  
+.dashboard__slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 10px;
+    background: var(--color-secondary);
+    cursor: pointer;
+}
+  
+.dashboard__slider::-moz-range-thumb {
+    width: 20px;
+    height: 10px;
+    background: var(--color-secondary);
+    cursor: pointer;
+}
+
+.dashboard__audio{
+    display: none;
+}
+
+.playlist{
+    margin-top:484px;
+    margin-bottom:1em;
+}
+
+.song{
+    padding: 1em;
+    background-color: var(--color-primary-light);
+    color: var(--color-tertiary);
+    border-radius:10px;
+    display:flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+.song.active{
+    background-color: var(--color-tertiary);
+    color: var(--color-white-pink);
+}
+
+.song:hover{
+    filter:brightness(110%);
+}
+
+.song + .song{
+    margin-top:1em;
+}
+
+.song__name{
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+.song__singer{
+    font-weight: 300;
+    color: var(--color-secondary);
+    font-style: italic;
+}
+
+.song.active .song__singer{
+    font-weight: 300;
+    color: var(--color-white-pink);
+}
+
+
+.song__thumbnail{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.ellipsis{
+    margin-left: auto;
+    background-color: transparent;
+    color: var(--color-secondary);
+    font-size: 2.5rem;
+}
+
+.song.active .ellipsis{
+    color: var(--color-white-pink)
+}

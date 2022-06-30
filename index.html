@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="player js-player">
+        <div class="dashboard">
+            <span class="subtitle">Now Playing</span>
+            <h1 class="title js-title">
+                Song Name
+            </h1>
+            <div class="img-container">
+                <img src="" alt="" class="imgs js-img"/>
+            </div>
+            <div class="btns-container">
+                <button class="control-btn replay-btn js-replay">
+                    <i class="fas fa-redo"></i>
+                </button>
+
+                <button class="control-btn prev-btn js-prev">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+
+                <div class="toggle-play-pause js-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </div>
+
+                <button class="control-btn next-btn js-next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+
+                <button class="control-btn shuffle-btn js-random">
+                    <i class="fas fa-random"></i>
+                </button>
+            </div>
+            <input type="range" min="0" max="100" step="0.1" value="0" class="dashboard__slider js-time">
+
+            <audio class="dashboard__audio js-audio" controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <ul class="playlist js-playlist"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
